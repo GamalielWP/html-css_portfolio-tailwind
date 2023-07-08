@@ -49,6 +49,20 @@ darkToggle.addEventListener('click', function () {
 // Pindahkan posisi toggle sesuai mode
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     darkToggle.checked = true;
-  } else {
+} else {
     darkToggle.checked = false;
-  }
+}
+
+// Mail to Gmail
+const message = document.querySelector('#message');
+const sendBtn = document.querySelector('#send-btn');
+let body = '';
+
+message.addEventListener('keyup', function () {
+    body = message.value;
+});
+
+sendBtn.addEventListener('click', function () {
+    sendBtn.href = 'https://mail.google.com/mail?fs=1&to=gamalielwp@gmail.com&tf=cm&body=' + body;
+    message.value = '';
+});
