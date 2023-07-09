@@ -63,6 +63,7 @@ message.addEventListener('keyup', function () {
 });
 
 sendBtn.addEventListener('click', function () {
-    sendBtn.href = 'https://mail.google.com/mail?fs=1&to=gamalielwp@gmail.com&tf=cm&body=' + body;
+    // sendBtn.href = 'https://mail.google.com/mail?fs=1&to=gamalielwp@gmail.com&tf=cm&body=' + body;
+    sendBtn.href = 'https://wa.me/6285791656941?text=' + body;
     message.value = '';
 });
