@@ -53,17 +53,16 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
     darkToggle.checked = false;
 }
 
-// Mail to Gmail
+// Send Whatsapp message
 const message = document.querySelector('#message');
 const sendBtn = document.querySelector('#send-btn');
-let body = '';
+let text = '';
 
 message.addEventListener('keyup', function () {
-    body = message.value;
+    text = message.value;
 });
 
 sendBtn.addEventListener('click', function () {
-    // sendBtn.href = 'https://mail.google.com/mail?fs=1&to=gamalielwp@gmail.com&tf=cm&body=' + body;
-    sendBtn.href = 'https://wa.me/6285791656941?text=' + body;
+    sendBtn.href = 'https://wa.me/6285791656941?text=' + text;
     message.value = '';
 });
